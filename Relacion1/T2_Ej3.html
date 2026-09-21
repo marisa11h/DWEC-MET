@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        let edad;
+        edad = parseInt(prompt("Dime tu edad: "));
+
+        if (edad < 8){
+            document.write("No entras en el rango de edades comprobadas");
+        }else {
+            switch (edad) {
+            case 8:
+            case 9:
+                document.write("Benjamin");
+                break;
+            case 10:
+            case 11:
+                document.write("alevín");
+                break;
+            case 12:
+            case 13:
+                document.write("infantil");
+                break;
+            case 14:
+            case 15:
+                document.write("cadete");
+                break;
+            case 16:
+            case 17:
+            case 18:
+                document.write("juvenil")
+                break;
+            default: document.write("Absoluto")
+                break;
+            }
+        }
+
+       
+    </script>
+</body>
+</html>
