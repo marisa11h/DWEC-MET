@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular la edad</title>
+</head>
+<body>
+    <script>
+
+        let fechaactual = parseInt(new Date().getFullYear());
+        let fechadenacimiento = parseInt(prompt("Dime tu edad de nacimiento: "));
+
+        function edad(fechaactual, fechadenacimiento) {
+            document.write(`tendran ${fechaactual - fechadenacimiento - 1} años o ${fechaactual - fechadenacimiento} años`)
+        }
+        edad(fechaactual, fechadenacimiento);
+    </script>
+</body>
+</html>
