@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <script>
+        let precio = parseFloat(prompt("Dime el precio inicial del producto: "));
+        let descuento = parseFloat(prompt("Dime el descuento que tiene este producto: "));
+
+        function precioFinal(precio, descuento) {
+            let descuentocalculado = (precio * descuento) / 100;
+            let preciof = precio - descuentocalculado;
+            document.write(`El precio original de este producto eran ${precio}€, pero despues de haberle aplicado el descuento que era de 
+            ${descuento}% se ha quedo en un precio final de ${preciof}€`);
+        }
+
+        precioFinal(precio, descuento)
+    </script>
+</body>
+</html>

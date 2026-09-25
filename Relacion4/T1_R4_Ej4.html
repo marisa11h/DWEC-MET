@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+<body>
+    <script>
+        let array1 = ["Manga", "Anime", "Videojuegos"];
+        let array2 = ["Movil", "Ordenador", "portatil"];
+        
+        function combinarDosArrays(array1, array2) {
+           let array3 = [];
+           // 1. Calculamos el total de vueltas numérico
+           let vueltas = array1.length + array2.length; 
+
+            // 2. Usamos directamente la variable 'vueltas' (sin .length)
+
+           for (let index = 0; index < vueltas; index++) {
+            if (index < array1.length) {
+                array3.push(array1[index]);
+            } else{
+                // 3. Para el segundo array, restamos el tamaño del primero 
+                // para volver a empezar desde el índice 0
+                array3.push(array2[index - array1.length]);
+            }
+        }
+             document.write(`${array3}`);
+    }
+
+    combinarDosArrays(array1, array2);
+
+    </script>
+</body>
+</html>

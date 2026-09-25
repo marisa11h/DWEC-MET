@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <script>
+        let valor = parseInt(prompt("Dime un valor: "));
+        let rangoInf = parseInt(prompt("Dime el rango inferior"));
+        let rangoSup = parseInt(prompt("Dime el rango superior: "));
+
+       function rango(valor, rangoInf, rangoSup) {
+             if (valor > rangoInf && valor < rangoSup) {
+                document.write(`Este valor está entre este rango`);
+        } else{
+                document.write(`Este valor no está entre este rango`);
+        }
+       }
+
+       rango(valor, rangoInf, rangoSup);
+    </script>
+</body>
+</html>
