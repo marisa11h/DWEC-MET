@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+</head>
+<body>
+        <script>
+            let opcion = prompt("Introduce una opción: \n 1.Potencia \n 2.Raíz \n 3.Potencia \n 4.Trigonometría");
+
+            switch (opcion) {
+                case "1":
+                    let base = parseInt(prompt("Dime un número base: "));
+                    let exponente = parseInt(prompt("Dime un número exponente: "));
+                    let operacion = Math.pow(base, exponente);
+                    document.write(`La potencia de ${base} elevado a ${exponente} es: ${operacion}`);    
+                    break;
+                
+                case "2":
+                    let numero = parseFloat(prompt("Dime un numero positivo: "));
+                    if (numero >= 0) {
+                        document.write(`La raíz de X es: ${Math.sqrt(numero)}`);
+                    } else{
+                        document.write(`El numero ${numero} no es un numero válido porque es negativo y pedimos un número positivo`);
+                    }
+                    break;
+
+                case "3":
+                    let num = parseFloat(prompt("Dime un número decimal: "));
+                    let baja = Math.floor(num);
+                    let alza = Math.round(num);
+                    document.write(`El numero ${num} redondeado a la alza es ${alza} <br>`); 
+                    document.write(`El numero ${num} redondeado a la baja es ${baja}`);    
+                    break;
+
+                case "4":
+                    let angulo = parseInt(prompt("Dime un ángulo: "));
+                    if (angulo >= 0 && angulo <= 360) {
+                        let coseno = Math.cos(angulo);
+                        let seno = Math.sin(angulo);
+                        let tangente = Math.tan(angulo);
+                        document.write(`El angulo º${angulo} tiene un coseno de ${coseno} <br>`); 
+                        document.write(`El angulo º${angulo} tiene un seno de ${seno}<br>`);
+                        document.write(`El angulo º${angulo} tiene una tangente de ${tangente}`);
+                    }  
+                    break;
+            
+            }
+            
+
+        </script>
+</body>
+</html>

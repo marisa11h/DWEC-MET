@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+</head>
+<body>
+    <script>
+        //Nombre del archivo: T3_ej4.html Realiza un script que pida un nombre y dos apellidos e indique el tiempo que se tardó en introducir los
+        //datos. La salida sería algo así como: En introducir Juan Torres Lago has tardado 25 segundos.
+        let tiempoinicial = new Date();
+        
+        let nombreCompleto = prompt("Dime tu nombre y tu dos apellidos");
+        
+        let fin = new Date();
+        
+        let totalSegundos = parseInt((fin - tiempoinicial) / 1000);
+       
+
+        document.write(`En introducir ${nombreCompleto} has tardado ${totalSegundos} segundos`);
+    </script>
+</body>
+</html>

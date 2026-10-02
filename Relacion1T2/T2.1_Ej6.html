@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio6</title>
+</head>
+<body>
+    <script>
+        let nombreapellidos = prompt("Dime tu nombre y apellidos y te mostrare: ");
+
+        let opcion = prompt("1.El tamaño del nombre más los apellidos \n 2.La cadena en minúsculas y en mayúsculas \n 3. Que divida el nombre y los apellidos y los muestre en 3 líneas");
+        switch (opcion) {
+            case "1":
+                total = 0;
+                for (let index = 0; index < nombreapellidos.length; index++) {
+                total = index++;
+                }
+                console.log(`El tamaño total es: ${total}`);
+                break;
+            case "2":
+                let mayúsculas = nombreapellidos.toUpperCase();
+                let minúsculas = nombreapellidos.toLowerCase();
+
+                console.log(mayúsculas);
+                console.log(minúsculas);
+                break;
+
+            case "3":
+                // Cambia cada espacio por un salto de línea (\n)
+                let trozos = nombreapellidos.split(" ");
+
+                console.log("Nombre:", trozos[0]);
+                console.log("Apellido 1:", trozos[1]);
+                console.log("Apellido 2:", trozos[2]);
+                break;
+            
+            
+            
+        
+        }
+    
+        
+    
+    </script>
+</body>
+</html>
