@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio10</title>
+</head>
+<body>
+    <script src="Funciones.js"></script>
+    <script>
+        let numeroTarjeta = prompt("Introduce la tarjeta (puede llevar guiones, ej: 9999-7777-8888-0000): ");
+        
+        let esValida = validateCreditCard2(numeroTarjeta);
+        
+        if (esValida) {
+            document.write(`La tarjeta "${numeroTarjeta}" SÍ es válida.`);
+        } else {
+            document.write(`La tarjeta "${numeroTarjeta}" NO es válida.`);
+}
+
+    </script>
+</body>
+</html>
