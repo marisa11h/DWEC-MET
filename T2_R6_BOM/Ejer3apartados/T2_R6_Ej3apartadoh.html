@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3 - apartado H</title>
+</head>
+<body>
+
+    <a href="#" onclick="abrirVentana(); return false;">Abrir ventana</a><br><br>
+    <a href="#" onclick="moverVentana(); return false;">Mover ventana 50px</a>
+
+    <script>
+        let ventanaH;
+
+        function abrirVentana() {
+            ventanaH = window.open("", "", "width=300,height=300");
+        }
+
+        function moverVentana() {
+            if (ventanaH && !ventanaH.closed) {
+                ventanaH.moveBy(50, 50);
+            }
+        }
+    </script>
+</body>
+</html>

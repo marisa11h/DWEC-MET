@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3 - apartado G</title>
+</head>
+<body>
+
+    <h1>Página Principal (Padre)</h1>
+    <p id="mensaje">Aquí aparecerá el texto enviado desde la gestión de ventanas.</p>
+
+    <a href="#" onclick="abrirVentana(); return false;">Abrir ventana (300x100)</a><br><br>
+    <a href="#" onclick="cerrarVentana(); return false;">Cerrar ventana</a><br><br>
+    <a href="#" onclick="escribirEnPadre(); return false;">Escribir en la página padre</a>
+
+    <script>
+        let ventanaF;
+
+        function abrirVentana() {
+            ventanaF = window.open("", "", "width=300,height=100,resizable=yes");
+        }
+
+        function cerrarVentana() {
+            if (ventanaF && !ventanaF.closed) {
+                ventanaF.close();
+            }
+        }
+
+        function escribirEnPadre() {
+            document.write("¡Hola! Este texto ha sido escrito en la página padre.");
+        }
+    </script>
+</body>
+</html>

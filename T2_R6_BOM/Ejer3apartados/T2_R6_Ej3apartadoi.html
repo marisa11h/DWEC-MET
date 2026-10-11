@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3 - apartado I</title>
+</head>
+<body>
+
+    <!-- Añadimos las coordenadas left y top en los parámetros de window.open -->
+    <a href="#" onclick="abrirVentana(); return false;">Abrir ventana en posición (500, 200)</a><br><br>
+    <a href="#" onclick="cerrarVentana(); return false;">Cerrar ventana</a>
+
+    <script>
+        let ventanaF;
+
+        function abrirVentana() {
+            ventanaF = window.open("", "", "width=300,height=100,left=500,top=200,resizable=yes");
+        }
+
+        function cerrarVentana() {
+            if (ventanaF && !ventanaF.closed) {
+                ventanaF.close();
+            }
+        }
+    </script>
+</body>
+</html>
