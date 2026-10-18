@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Analizador de Texto</title>
+</head>
+<body>
+
+    <input type="button" value="Analizar Texto" onclick="analizarTexto()">
+    <script>
+        function analizarTexto() {
+            let frase = prompt("Introduce una frase o texto de ejemplo:");
+
+            if (frase) {
+                let palabras = frase.split(" ");
+
+                let numPalabras = palabras.length;
+                let primeraPalabra = palabras[0];
+                let ultimaPalabra = palabras[palabras.length - 1];
+
+                let inverso = [...palabras].reverse();
+                let ordenAZ = [...palabras].sort();
+                let ordenZA = [...ordenAZ].reverse();
+
+                let nuevaVentana = window.open("", "Resultado", "width=400,height=400");
+                
+                nuevaVentana.document.write("<h2>Resultado del análisis:</h2>");
+                nuevaVentana.document.write("<p><strong>Número de palabras:</strong> " + numPalabras + "</p>");
+                nuevaVentana.document.write("<p><strong>Primera palabra:</strong> " + primeraPalabra + "</p>");
+                nuevaVentana.document.write("<p><strong>Última palabra:</strong> " + ultimaPalabra + "</p>");
+                nuevaVentana.document.write("<p><strong>Orden inverso:</strong> " + inverso + "</p>");
+                nuevaVentana.document.write("<p><strong>Ordenadas de la A a la Z:</strong> " + ordenAZ + "</p>");
+                nuevaVentana.document.write("<p><strong>Ordenadas de la Z a la A:</strong> " + ordenZA + "</p>");
+                
+                nuevaVentana.document.close();
+            } else {
+                alert("No has introducido ningún texto.");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio7</title>
+  </head>
+  <body>
+    <script>
+     const numeros = new Array(20);
+
+    for (let index = 0; index < numeros.length; index++) {
+    let random = Math.floor(Math.random() * 101); 
+    numeros[index] = random;
+}
+    console.log("Valores sin ordenar:", [...numeros]);
+
+    let n = numeros.length;
+    for (let i = 0; i < n - 1; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+            if (numeros[j] > numeros[j + 1]) {
+                [numeros[j], numeros[j + 1]] = [numeros[j + 1], numeros[j]];
+         }
+        }
+    }
+
+
+    const numerosUnicos = [];
+
+    for (let i = 0; i < numeros.length; i++) {
+    if (i === 0 || numeros[i] !== numeros[i - 1]) {
+        numerosUnicos.push(numeros[i]);
+    }
+}
+    console.log("Valores ordenados (sin duplicados):", numerosUnicos);
+    </script>
+  </body>
+</html>

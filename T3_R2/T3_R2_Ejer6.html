@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio6</title>
+</head>
+<body> 
+    <p>Hola muy buenas como estás</p>
+    <p>Estamos hoy en la escuela</p>
+    <p>El barcelona gana ayer por una goleada al betis</p>
+    <p>Hoy está lloviendo muchisimo</p>
+
+    <input type="button" value="Haz click aqui" onclick="hazclickaqui()">
+
+    <script>
+        /*
+        Crea una página web que contenga varios párrafos con texto de ejemplo. La página contendrá
+        un botón que al pulsarlo solicitará al usuario una palabra o cadena de texto e indicará si existe o
+        no dicha palabra dentro del document
+        */
+
+        let frases = "Hola muy buenas como estás. Estamos hoy en la escuela. El barcelona gana ayer por una goleada al betis. Hoy está lloviendo muchisimo";
+        
+        function hazclickaqui() {
+                let palabraocadena = prompt("Dime una palabra o frase: ");
+                if (frases.includes(palabraocadena)) {
+                    alert("Está palabra o frase existe en el documento");
+                }else{
+                    alert("Está palabra o frase no existe en el documento");
+                }
+                
+            }        
+    </script>
+</body>
+</html>
