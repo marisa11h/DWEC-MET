@@ -95,10 +95,10 @@ function paresImpares() {
 }
 
 
- 
+  let registroVendedores = [];
 
 function calcularSueldoVendedor() {
-    let registroVendedores = [];
+   
     
     let nombre = nombreVendedor.value;
     let ventas = parseFloat(ventasVendedor.value);
@@ -183,6 +183,46 @@ function simularDadosBidimensional() {
     }
     
     console.log("--- MATRIZ DE COMBINACIONES (Dado 1 vs Dado 2) ---");
-    console.table(combinaciones); // console.table pinta las matrices de forma preciosa en la consola
+    console.table(combinaciones); // console.table pinta las matrices de forma preciosa en la consola.
+}
+
+// Ejercicio10
+
+   let asientosAvion = new Array(10).fill(false);
+
+function reservarAsiento() {
+    let nombre = pasajeroInput.value;
+    let tipoClase = claseAsientoSelect.value;
+    
+    if (nombre === "") {
+        alert("Escribe el nombre del pasajero.");
+        return;
+    }
+    
+    let asientoAsignado = -1;
+    
+    let inicio = (tipoClase === "First") ? 0 : 5;
+    let fin = (tipoClase === "First") ? 5 : 10;
+    
+    for (let i = inicio; i < fin; i++) {
+        if (asientosAvion[i] === false) {
+            asientosAvion[i] = true; 
+            asientoAsignado = i + 1; 
+            break;
+        }
+    }
+    
+    if (asientoAsignado !== -1) {
+        let ventanaImpresion = window.open("", "_blank", "width=400,height=200");
+        ventanaImpresion.document.write(`
+            <h3>TARJETA DE EMBARQUE</h3>
+            <p><strong>Pasajero:</strong> ${nombre}</p>
+            <p><strong>Clase:</strong> ${tipoClase}</p>
+            <p><strong>Número de Asiento:</strong> ${asientoAsignado}</p>
+        `);
+        ventanaImpresion.document.close();
+    } else {
+        alert(`Lo sentimos, la sección ${tipoClase} está completa.`);
+    }
 }
 
