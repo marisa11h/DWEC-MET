@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Apartado B</title>
+</head>
+<body>
+    <a href="#" onclick="abrirVentana(); return false;">abrirVentana</a><br><br>
+    <a href="#" onclick="cerrarVentana(); return false;">cerrarVentana</a><br><br>
+    <a href="#" onclick="mensaje(); return false;">mensaje</a>
+
+    <script>
+        let ventana;
+
+        function abrirVentana() {
+            ventana = window.open("", "", "width=350,height=350");
+        }
+
+        function cerrarVentana() {
+            if (ventana) {
+                ventana.close();
+            }
+        }
+
+        function mensaje() {
+            if (ventana && !ventana.closed) {
+                alert("Sigue abierta la ventana");
+            } else {
+                alert("Se ha cerrado la ventana");
+            }
+        }
+    </script>
+</body>
+</html>

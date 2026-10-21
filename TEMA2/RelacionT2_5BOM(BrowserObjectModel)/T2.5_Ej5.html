@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <input type="button" value="abrirVentana" onclick="abrirVentana()">
+    <button onclick="cerrarse()">cerrar</button>
+    <input type="button" value="Enviar un mensaje a la ventana secundaria" onclick="vent.recibeMensaje('¡Hola desde la principal!')">
+
+    <script>
+        let vent;
+        
+        function abrirVentana() {
+            vent = window.open("", "", `width=500,height=400`);
+            
+            vent.document.write(`
+                <!-- Párrafo que recibirá el texto -->
+                <p id="parrafo">Texto por defecto de la secundaria</p>
+
+                <input type="button" value="CerrarVentana" onclick="cerrarVentana()"> 
+                
+                <script>
+                    function cerrarVentana() {
+                        window.close();
+                    }
+
+                    function recibeMensaje(texto) {
+                        let objeto = document.getElementById("parrafo");
+                        objeto.innerHTML = texto;
+                    };
+                <\/script>
+            `);
+        }
+
+        function cerrarse(params) {
+            vent.close();
+        }
+        
+    </script>
+</body>
+</html>

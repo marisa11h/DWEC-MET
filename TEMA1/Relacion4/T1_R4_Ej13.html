@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("Dime un numero para inicializar la factorizacion"));
+
+        function factorial(num) {
+            let total = 1;
+            for (let index = num; index > 0; index--) {
+                total *= index;
+            }
+            document.write(`El factorial de ${num} es ${total}`);
+        }
+
+        factorial(num);
+    </script>
+</body>
+</html>

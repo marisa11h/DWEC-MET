@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obAlumno = {codigo: 5, nombre: "Antonio Gomez", edad: 15};
+
+        let ArAlumnos = [
+            {codigo: 3, nombre: "Juan Gomez", edad: 16},
+            {codigo: 1, nombre: "Pedro Gomez", edad: 18},
+            obAlumno,
+        ];
+
+        let encontrar = ArAlumnos.find(ArAlumnos => ArAlumnos.codigo == 5 );
+
+        let ordenar = ArAlumnos.sort((alumno1, alumno2) => alumno1.codigo - alumno2.codigo);
+
+        let filtrar = ArAlumnos.filter(ArAlumnos => ArAlumnos.edad >= 18);
+
+        console.log(encontrar);
+        console.log(ordenar);
+        console.log(filtrar);
+    </script>
+</body>
+</html>

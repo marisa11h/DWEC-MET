@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Apartado C</title>
+</head>
+<body>
+    <a href="#" onclick="abrirVentana(); return false;">Abrir Ventana</a><br><br>
+    <a href="#" onclick="cerrarVentana(); return false;">Cerrar Ventana</a>  
+    
+    <script>
+        
+        let vnueva;
+        let left = screen.width;
+        function cerrarVentana() {
+            vnueva.close();
+        }
+        function abrirVentana() {
+            let titulo = prompt("Dime el nombre de un titulo: ");
+            vnueva = window.open("", "", `width=500,height=400,left=${left}`);
+            vnueva.document.title = titulo;
+        }
+    </script>
+</body>
+</html>

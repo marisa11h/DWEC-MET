@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+<body>
+        <script>
+        // 1. Pedimos la fecha original
+            let fechaOriginal = new Date(prompt("Dime tu cumpleaños con el formato YYYY-MM-DD: "));
+
+        // 2. Extraemos el año, el mes y el día (los guardamos en variables fijas)
+            let anioInicio = fechaOriginal.getFullYear();
+            let mes = fechaOriginal.getMonth(); 
+            let dia = fechaOriginal.getDate();
+
+            console.log("Años en los que tu cumpleaños cae en domingo:");
+
+        // 3. El bucle solo avanza el número del año
+            for (let anio = anioInicio; anio <= 2100; anio++) {
+    
+        // 4. Creamos una fecha nueva para cada año usando los datos originales
+            let fechaEvaluar = new Date(anio, mes, dia);
+    
+        // 5. Comprobamos si esa nueva fecha cae en domingo
+            if (fechaEvaluar.getDay() === 0) {
+            console.log(anio);
+        }
+    }          
+        </script>
+</body>
+</html>

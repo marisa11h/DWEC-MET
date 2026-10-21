@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5 - Apartado E</title>
+</head>
+<body>
+    <h1>Ejemplo de document.write</h1>
+    <p id="texto">Este es el párrafo inicial de la página.</p>
+
+
+    <script>
+
+        document.write("<p>Texto 1: Escrito MIENTRAS se cargaba la página.</p>");
+    </script>
+
+    <br>
+
+    <a href="#" onclick="probarSobreescribir(); return false;">Probar a escribir después de cargar (Sobreescribe todo)</a>
+
+    <script>
+        function probarSobreescribir() {
+            document.write("¡Vaya! Todo el contenido anterior ha desaparecido y ha sido sobreescrito.");
+        }
+    </script>
+</body>
+</html>

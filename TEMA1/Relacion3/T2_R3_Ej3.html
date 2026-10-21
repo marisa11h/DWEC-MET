@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometria</title>
+</head>
+<body>
+    <script>
+        let radio = parseFloat(prompt("Dime el radio del circulo: "));
+
+        function circuferencia(radio) {
+            let circuferencia = 2 * Math.PI * radio;
+            document.write(`La circunferencia es ${circuferencia}<br>`)
+        }
+
+        function area(radio) {
+            let superficie = Math.PI * (radio * radio);
+            document.write(`La area es ${superficie}`)
+        }
+
+        circuferencia(radio);
+        area(radio);
+    </script>
+</body>
+</html>
+

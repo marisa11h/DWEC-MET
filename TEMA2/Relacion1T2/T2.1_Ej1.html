@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+</head>
+<body>
+        <script>
+            //Crea un programa que muestre el número de días que quedan desde hoy hasta las vacaciones de Navidad
+            //(19 de diciembre).
+    
+            let fechactualaño = new Date().getFullYear();
+            let fechaactualmes = new Date().getMonth();
+            let fechaactualdia = new Date().getDate();
+            let fechanavidad = new Date(2026, 11, 19);
+
+            let hoy = new Date(fechactualaño, fechaactualmes, fechaactualdia);
+            let navidad = fechanavidad - hoy;
+
+            document.write(`Quedan hasta el día de navidad ${parseInt(navidad/86400000)} dias`);
+            
+
+        </script>
+</body>
+</html>

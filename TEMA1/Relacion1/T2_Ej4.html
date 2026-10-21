@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=for, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</hd>
+<body>
+<script>
+
+for (let index = 9; index <= 21; index++) {
+    let esHoraPunto = true;
+    for (let j = 0; j < 2; j++) {
+        if (esHoraPunto) {
+            document.write(index + ":00<br>");
+        } else {
+            document.write(index + ":30<br>");
+        }
+        
+        esHoraPunto = !esHoraPunto;
+    }
+
+
+}    
+    </script>
+</body>
+</html>

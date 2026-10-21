@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+</head>
+<body>
+    <script>
+        /*5. Nombre del archivo: T4_EJ5.html
+        Utilizando el método random del objeto Math carga con valores aleatorios un array de 20
+        elementos con valores enteros entre el 0 y el 100. Ten en cuenta que random devuelve un
+        número flotante entre 0 y 1. Una vez cargado muestra los datos del array por pantalla.
+        Tras ello muestra la información del ejercicio anterior sobre los valores de dicho array, es decir:
+        Valor mínimo
+        Valor máximo
+        Valor medio.*/
+
+        const numeros = new Array(20);
+
+       
+        let promedio = 0;
+        for (let index = 0; index < numeros.length; index++) {
+            let random = Math.floor(Math.random() * (100 - 0 ) + 1);
+            numeros[index] = random;
+            
+            promedio += numeros[index] / 20;    
+        }
+        let resultado = promedio.toFixed(2);
+        let Max = Math.max(...numeros);
+        let Min = Math.min(...numeros);
+        
+        
+        document.write(`${numeros}<br>`);
+        document.write(`El número máximo de este array es ${Max}<br>`);
+        document.write(`El número minimo de este array es ${Min}<br>`);
+        document.write(`El promedio de este array es ${resultado}<br>`);
+    </script>
+</body>
+</html>

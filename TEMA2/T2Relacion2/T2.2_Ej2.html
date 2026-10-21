@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+<body>
+    <script>
+        
+        let cronometro = setInterval(function() {
+            let hoy = new Date();
+            let horas = hoy.getHours();
+            let minutos = hoy.getMinutes();
+            let segundos = hoy.getSeconds();
+            let tiempo = horas + ":" + minutos + ":" + segundos;
+            console.log(tiempo);
+        }, 1000);
+
+       setTimeout(function() {
+        clearInterval(cronometro)
+        console.log(`${"Reloj detenido automaticamente despues de 60 segundos"}`);
+       }, 60000);
+    </script>
+</body>
+</html>

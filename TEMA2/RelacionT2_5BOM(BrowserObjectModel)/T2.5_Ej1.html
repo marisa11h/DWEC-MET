@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <input type="button" value="Abrir Ventana" onclick="abrirVentana()">
+    <input type="button" value="Cerrar Ventana" onclick="cerrarVentana()">  
+    
+    <script>
+        
+        let vnueva;
+        let left = screen.width;
+        function cerrarVentana() {
+            vnueva.close();
+        }
+        function abrirVentana() {
+            let titulo = prompt("Dime el nombre de un titulo: ");
+            vnueva = window.open("", "", `width=500,height=400,left=${left}`);
+            vnueva.document.title = titulo;
+            
+            
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <script>
+        function divisible(...args){
+            let total = 0;
+            for (let index = 0; index < args.length; index++) {
+                if (args[index] % 3 === 0) {
+                    document.write(`Si<br>`)
+                } else{
+                    document.write(`No<br>`)
+                }
+            }
+        }
+
+        divisible(1, 5, 8, 0, 4, 3, 13, 21, 56, 78)
+    </script>
+</body>
+</html>

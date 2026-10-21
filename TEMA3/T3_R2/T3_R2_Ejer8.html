@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio8</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ordenar Nombres</title>
+</head>
+<body>
+
+    <input type="button" value="Introducir Nombres" onclick="ordenarNombres()">
+
+    <script>
+        function ordenarNombres() {
+            let nombres = prompt("Introduce varios nombres separados por comas:");
+
+            if (nombres) {
+                let listaNombres = nombres.split(",");
+                listaNombres.sort();
+                alert("Nombres ordenados alfabéticamente:\n" + listaNombres);
+            } else {
+                alert("No has introducido ningún nombre.");
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

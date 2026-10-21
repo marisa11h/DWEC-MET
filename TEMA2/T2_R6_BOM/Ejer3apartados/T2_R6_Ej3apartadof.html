@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3 - apartado F</title>
+</head>
+<body>
+
+    <a href="#" onclick="abrirVentana(); return false;">Abrir ventana (300x100)</a><br><br>
+    <a href="#" onclick="cerrarVentana(); return false;">Cerrar ventana</a>
+
+    <script>
+        let ventanaF;
+
+        function abrirVentana() {
+            ventanaF = window.open("", "", "width=300,height=100,resizable=yes");
+        }
+
+        function cerrarVentana() {
+            if (ventanaF) {
+                ventanaF.close();
+            }
+        }
+    </script>
+</body>
+</html>

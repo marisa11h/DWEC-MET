@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio9</title>
+</head>
+<body>
+    <script src="Funciones.js"></script>
+    <script>
+        let numeroTarjeta = prompt("Introduce el número de tarjeta (16 dígitos): ");
+        let esValida = validateCreditCard(numeroTarjeta);
+
+        if (esValida) {
+            document.write(`La tarjeta ${numeroTarjeta} si es válida.`);
+        } else {
+            document.write(`La tarjeta ${numeroTarjeta} no es válida.`);
+        }
+    </script>
+</body>
+</html>

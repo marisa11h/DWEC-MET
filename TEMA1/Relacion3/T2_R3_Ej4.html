@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grados</title>
+</head>
+<body>
+    <script>
+        let celsius = parseFloat(prompt("Dime la temperatura de grados Celsius: "));
+
+        function convertirc(celsius) {
+            let convertfarenhait = (celsius * 9/5) + 32;
+            document.write(`${celsius}°C es ${convertfarenhait}°F<br>`);
+        }
+
+        let farenhait = parseFloat(prompt("Dime la temperatura de grados farenhait: "));
+        
+        function convertirf(farenhait) {
+            let celsiusconvert = (farenhait - 32) * 5/9;
+            document.write(`${farenhait}°F es ${celsiusconvert}°C`);
+        }
+
+        convertirc(celsius);
+        convertirf(farenhait);
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Array1 = ['hola', 1, 5];
+
+        const alumno = {
+            nombre: 'juan',
+            grupo: 'A',
+            notas: [4, 7, 8],
+            muestraNotas: function () {
+                this.notas.forEach(nota => console.log(nota));
+            },
+            addNota: function (nota) {
+                this.notas.push(nota);
+            },
+            addNotas: function (notas) {
+                this.notas = this.notas.concat(notas);
+            },
+        };
+
+        let alumno2 = alumno
+
+        alumno.addNota(2);
+        alumno.addNotas([4, 9]);
+        alumno2.muestraNotas();
+
+        /*
+function crearArchivoPedido($cliente, $productos, $total) {
+
+    $ruta = './datos/pedidos';
+
+    // 2. Nos aseguramos de que la carpeta exista. Si no, la crea con permisos de escritura.
+    if (!is_dir($carpetaDestino)) {
+        mkdir($carpetaDestino, 0777, true); 
+    }
+
+    // 3. Generamos el nombre del archivo usando los milisegundos del sistema sin el punto decimal
+    $nombreArchivo = str_replace('.', '', microtime(true)) . '.txt';
+    $rutaCompleta = $carpetaDestino . '/' . $nombreArchivo;
+
+    // 4. Empezamos a estructurar el contenido línea por línea como lo necesitas
+    $contenido = date("d/m/Y - H:i") . "\n"; // 1ª línea: Fecha y hora
+    $contenido .= $cliente . "\n";            // 2ª línea: Nombre del cliente
+
+    // Siguientes líneas: Recorremos los productos y los formateamos con los dos puntos (:)
+    foreach ($productos as $prod) {
+        // Estructura: Producto:Precio€:Cantidad:Subtotal €
+        $contenido .= $prod['nombre'] . ":" . $prod['precio'] . "€:" . $prod['cantidad'] . ":" . $prod['subtotal'] . " €\n";
+    }
+
+    // Última línea: Total del pedido
+    $contenido .= "TOTAL:" . $total . " €";
+
+    // 5. Escribimos el fichero físicamente en el disco del servidor
+    return file_put_contents($rutaCompleta, $contenido) !== false;
+}
+*/
+    </script>
+</body>
+
+</html>

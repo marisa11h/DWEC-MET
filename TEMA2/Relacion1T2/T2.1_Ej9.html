@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio9</title>
+</head>
+<body>
+    <script>
+        /*Escribe un programa que pida una frase y escriba cuántas de las letras que tiene son vocales.*/
+        let frase = prompt("Dime una frase: ");
+        total = 0
+        for (let index = 0; index < frase.length; index++) {
+            if (frase[index].toLowerCase() == "a" || frase[index].toLowerCase() == "e" || frase[index].toLowerCase() == "i" || frase[index].toLowerCase() == "o" || frase[index].toLowerCase() == "u"  ) {
+                total++
+            }     
+        }
+
+        document.write(`Las vocales aparecen en está frase ${total} veces`);
+    </script>
+</body>
+</html>

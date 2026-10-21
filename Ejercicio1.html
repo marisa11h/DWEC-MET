@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+<body>
+    <script>
+        
+        const listanum = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B',
+                        'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+        function devolverletra(numero) {
+            if (numero > 0 && numero <= 99999999) {
+            let resto = numero % 23;
+            return listanum[resto];
+        } else{
+            return false;
+        }
+        }
+
+       function validardni(dni) {
+        let numeros = dni.slice(0, -1);
+        let letra = dni.charAt(dni.length -1);
+        if (devolverletra(numero) === letra) {
+            return true;
+        }else{
+            return false;
+        }
+
+       }
+
+        let dni = (prompt("Dime tu dni con letra: " ));
+        
+        if (validardni(dni)) {
+            document.write(`El DNI dado es correcto`);
+        }else{
+            document.write(`El DNI no es correcto`);
+        }
+
+        document.write(validardni(dni));
+        
+
+        
+    </script>
+</body>
+</html>

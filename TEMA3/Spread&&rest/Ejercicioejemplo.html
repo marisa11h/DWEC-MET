@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <script>
+        const arModulos = ["Dwc", "Dws", "Interfaces", "IPE"];
+        const arProfesores = ["Sergio", "Gerardo", "Gustavo", "Susana"];
+        let [asig1, asig2, ...arResto] = arModulos;
+        let arnuevo = [...arModulos, ...arProfesores];
+        console.log(arResto);
+        console.log(arnuevo);
+    </script>
+</body>
+</html>

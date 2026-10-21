@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <script>
+        /*Escribe una función tieneTresDigitos que compruebe si un número dado
+        tiene 3 dígitos y devuelva si o no.*/
+
+        let num = parseInt(prompt("dime un numero y comprobaremos si es de tres digitos: "));
+
+        function tieneTresDigitos(num) {
+            if (num >= 100 && num <= 999) {
+                document.write(`Este número que es ${num} tiene tres digitos`);
+            } else {
+                document.write(`Este número que es ${num} no tiene tres digitos`);
+            }
+        }
+
+        tieneTresDigitos(num);
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio10</title>
+</head>
+<body>
+    <script>
+        /*Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales.*/
+         let frase = prompt("Dime una frase: ");
+         totala= 0;
+         totale= 0;
+         totali= 0;
+         totalo= 0;
+         totalu= 0;
+         for (let index = 0; index < frase.length; index++) {
+            switch (frase[index].toLowerCase()) {
+                case "a":
+                    totala++;
+                    break;
+                
+                case "e":
+                    totale++;
+                    break;
+
+                case "i":
+                    totali++;
+                    break;
+
+                case "o":
+                    totalo++;
+                    break;
+
+                case "u":
+                    totalu++;
+                    break;
+              
+            }
+            
+         }
+
+            document.write(`La vocal a en está frase aparece ${totala} veces <br>`);
+            document.write(`La vocal e en está frase aparece ${totale} veces <br>`);
+            document.write(`La vocal i en está frase aparece ${totali} veces <br>`);
+            document.write(`La vocal o en está frase aparece ${totalo} veces <br>`);
+            document.write(`La vocal u en está frase aparece ${totalu} veces <br>`);
+         
+         
+         
+           
+         
+    </script>
+</body>
+</html>

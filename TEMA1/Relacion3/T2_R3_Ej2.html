@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consumición de comida</title>
+</head>
+<body>
+    <script>
+        let edad = parseInt(prompt("Dime tu edad: "));
+        let edadmaxima = parseInt(prompt("dime edad máxima: "));
+        let estimado = parseInt(prompt("dime un número estimado de la comida que comes por día: "));
+
+        function consumir(edad, edadmaxima, estimado){
+            let total = ((edadmaxima - edad) * estimado * 365)
+            document.write(`tu necesitaras ${total} para durar hasta la edad madura y vieja de ${edadmaxima}`)  
+        }
+
+        consumir(edad, edadmaxima, estimado);
+    </script>
+</body>
+</html>

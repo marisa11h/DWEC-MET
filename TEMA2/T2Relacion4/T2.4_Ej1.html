@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <script src="Funciones.js"></script>
+    <script>
+        let cad_arg = prompt("Dime una cadena: ");
+        
+        //a) invierteCadena(cad_arg): devuelve invertida una cadena dada por el usuario
+        cadenaalreves(cad_arg);
+        //b) inviertePalabras(cad_arg): devuelve invertidas las palabras contenidas en la cadena.
+        palabrasalreves(cad_arg);
+        //c) encuentraPalabraMasLarga(cad_arg): para una cadena de caracteres dada devuelve la longitud de la 
+        // palabra más larga en ella contenida
+        palabramaslarga(cad_arg);
+        //d) fltraPalabrasMasLargas(cad_arg, i): para una cadena de caracteres y un valor numérico (i), 
+        // devuelva el número de palabras cuya longitud es mayor a i.
+        let i = parseInt(prompt("Dime el número de i: "));
+        palabramaslargaquei(cad_arg, i);
+        //e) cadenaBienFormada(cad_arg): formatea correctamente la cadena pasada,
+        // de tal modo que sólo aparece en mayúscula la primera letra y el resto en minúscula.
+        formateo(cad_arg);
+       
+    </script>
+</body>
+</html>
