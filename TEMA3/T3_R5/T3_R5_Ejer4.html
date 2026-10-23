@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+</head>
+<body>
+    <script>
+    
+ function generarMapaTesoro(filas, columnas) {
+    if (filas < 5 || columnas < 5) {
+        console.error("Las dimensiones deben ser al menos de 5x5.");
+        return null;
+    }
+
+
+    let mapa = Array.from({ length: filas }, () => Array(columnas).fill(0));
+
+   
+    const filaTesoro = Math.floor(Math.random() * filas) + 1;
+    const colTesoro = Math.floor(Math.random() * columnas) + 1;
+    
+
+    mapa[filaTesoro - 1][colTesoro - 1] = (filaTesoro * 10) + colTesoro;
+
+
+    let celdasDisponibles = [];
+    for (let r = 1; r <= filas; r++) {
+        for (let c = 1; c <= columnas; c++) {
+            if ((r === 1 && c === 1) || (r === filaTesoro && c === colTesoro)) continue;
+            celdasDisponibles.push({ r, c });
+        }
+    }
+
+    
+    for (let i = celdasDisponibles.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [celdasDisponibles[i], celdasDisponibles[j]] = [celdasDisponibles[j], celdasDisponibles[i]];
+    }
+
+
+
+    let longitudCamino = Math.min(Math.floor(Math.random() * 8) + 6, celdasDisponibles.length);
+    let camino = [{ r: 1, c: 1 }, ...celdasDisponibles.slice(0, longitudCamino), { r: filaTesoro, c: colTesoro }];
+
+    for (let i = 0; i < camino.length - 1; i++) {
+        let celdaActual = camino[i];
+        let celdaSiguiente = camino[i + 1];
+        mapa[celdaActual.r - 1][celdaActual.c - 1] = (celdaSiguiente.r * 10) + celdaSiguiente.c;
+    }
+
+
+    for (let r = 1; r <= filas; r++) {
+        for (let c = 1; c <= columnas; c++) {
+            if (mapa[r - 1][c - 1] === 0) {
+                let destinoR = Math.floor(Math.random() * filas) + 1;
+                let destinoC = Math.floor(Math.random() * columnas) + 1;
+                
+             
+                while (destinoR === r && destinoC === c) {
+                    destinoR = Math.floor(Math.random() * filas) + 1;
+                    destinoC = Math.floor(Math.random() * columnas) + 1;
+                }
+                mapa[r - 1][c - 1] = (destinoR * 10) + destinoC;
+            }
+        }
+    }
+
+    return mapa;
+}
+
+
+const nuevoMapa = generarMapaTesoro(6, 6);
+console.log("Mapa Generado de forma exitosa:");
+console.table(nuevoMapa);
+
+    </script>
+</body>
+</html>

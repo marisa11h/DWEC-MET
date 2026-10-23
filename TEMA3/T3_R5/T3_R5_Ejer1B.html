@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1B</title>
+</head>
+<body>
+    <script>
+        let lista = ["hola", "holita", "como estás amigo", "estamos bien", "tu", "jota", "holita como estas aloha"];
+
+        let palabraMasLarga = lista.reduce((acumulado, actual) => {
+        return actual.length > acumulado.length ? actual : acumulado;
+        }, "");
+
+        console.log(palabraMasLarga);
+
+        
+    </script>
+</body>
+</html>

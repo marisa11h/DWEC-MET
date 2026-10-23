@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+</head>
+<body>
+    <script>
+    
+ const mapa = [
+        [34, 21, 32, 41, 25],
+        [14, 42, 43, 14, 31],
+        [54, 45, 52, 42, 23],
+        [33, 15, 51, 31, 35],
+        [21, 52, 33, 13, 23]
+        ];
+
+
+let filaActual = 1;
+let colActual = 1;
+let tesoroEncontrado = false;
+
+console.log("--- Iniciando la Búsqueda del Tesoro ---");
+
+
+while (!tesoroEncontrado) {
+    let i = filaActual - 1;
+    let j = colActual - 1;
+    
+    let pista = mapa[i][j];
+    
+    console.log(`Visitada celda [${filaActual}, ${colActual}]. Pista encontrada: ${pista}`);
+    
+    let nuevaFila = Math.floor(pista / 10);
+    let nuevaCol = pista % 10;
+    
+    if (nuevaFila === filaActual && nuevaCol === colActual) {
+        tesoroEncontrado = true;
+        console.log(`\n¡TESORO ENCONTRADO! Está en la celda [${filaActual}, ${colActual}] con el valor ${pista}.`);
+    } else {
+        filaActual = nuevaFila;
+        colActual = nuevaCol;
+    }
+}
+
+    </script>
+</body>
+</html>

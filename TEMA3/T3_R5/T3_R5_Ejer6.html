@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Code</title>
+</head>
+<body>
+    <script>
+    const mensajeOriginal = "If man was meant to stay on the ground god would have given us roots";
+
+    function cifrarSquareCode(texto) {
+        const textoLimpio = texto.replace(/\s+/g, '').toLowerCase();
+        const longitud = textoLimpio.length;
+
+        if (longitud === 0) return "";
+
+
+        const columnas = Math.ceil(Math.sqrt(longitud));
+        const filas = Math.ceil(longitud / columnas);
+
+       
+        let rectangulo = [];
+        for (let i = 0; i < longitud; i += columnas) {
+            rectangulo.push(textoLimpio.slice(i, i + columnas));
+        }
+
+        let bloquesCodificados = [];
+        for (let c = 0; c < columnas; c++) {
+            let palabraCifrada = "";
+            for (let f = 0; f < rectangulo.length; f++) {
+                if (rectangulo[f][c]) {
+                    palabraCifrada += rectangulo[f][c];
+                }
+            }
+            bloquesCodificados.push(palabraCifrada);
+        }
+
+        return bloquesCodificados.join(" ");
+    }
+
+
+    const mensajeCifrado = cifrarSquareCode(mensajeOriginal);
+    console.log("Mensaje Original:", mensajeOriginal);
+    console.log("Mensaje Cifrado :", mensajeCifrado);
+    </script>
+</body>
+</html>

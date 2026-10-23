@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+<body>
+    <script>
+    
+    const lista = ["John Doe", "Jane Smith", "Carlos Santana", "Jack Reacher", "María Gómez", "J.J. Martin"];
+
+    const resultado = lista
+ 
+  .filter(lista => lista.startsWith('J'))
+  
+
+  .map(lista => {
+    return lista
+      .split(' ')                 
+      .map(palabra => palabra[0])  
+      .join('');                   
+  })
+  
+  
+    .sort();
+
+    console.log(resultado); 
+
+
+    </script>
+</body>
+</html>

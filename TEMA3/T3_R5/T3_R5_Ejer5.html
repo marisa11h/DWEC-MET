@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+</head>
+<body>
+    <script>
+   const matriz = [
+  [10, 54, 8 , 34, 2], 
+  [1,  5,  7 , 6,  4],
+  [4,  6,  45, 3,  1]  
+];
+
+    function buscarPuntosDeSilla(arr) {
+        let encontrados = [];
+        const filas = arr.length;
+        const columnas = arr[0].length;
+
+        for (let i = 0; i < filas; i++) {
+            for (let j = 0; j < columnas; j++) {
+                let valorActual = arr[i][j];
+                let esMaxFila = true;
+                let esMinColumna = true;
+
+                // Verificar si es el máximo de la fila
+                for (let c = 0; c < columnas; c++) {
+                    // CORREGIDO: Nos saltamos la comparación con la misma posición
+                    if (c !== j && valorActual <= arr[i][c]) {
+                        esMaxFila = false;
+                        break; 
+                    }
+                }
+
+                // Verificar si es el mínimo de la columna
+                if (esMaxFila) {
+                    for (let f = 0; f < filas; f++) {
+                        // CORREGIDO: Arreglado el operador '=>' por '>=' y añadida la excepción de la misma posición
+                        if (f !== i && valorActual >= arr[f][j]) {
+                            esMinColumna = false;
+                            break; 
+                        }
+                    }
+                }
+
+                if (esMaxFila && esMinColumna) {
+                    encontrados.push({ fila: i + 1, columna: j + 1, valor: valorActual });
+                }
+            }
+        }
+
+        if (encontrados.length > 0) {
+            console.log(`--- Se encontraron ${encontrados.length} puntos de silla ---`);
+            encontrados.forEach(punto => {
+                console.log(`Punto de silla encontrado en las coordenadas [Fila: ${punto.fila}, Columna: ${punto.columna}] con valor: ${punto.valor}`);
+            });
+        } else {
+            console.log("No saddle points");
+        }
+    }
+
+    buscarPuntosDeSilla(matriz);
+    </script>
+</body>
+</html>
